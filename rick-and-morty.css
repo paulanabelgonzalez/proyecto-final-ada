@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@media(min-width:400px){ 
+.container {
+    background: url(imagenes/fondo-presentacion.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+header {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.first-title {
+    border-radius: 10px;
+    width: 100%;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 75px;
+    text-shadow: 0 0 10px #fff;
+}
+
+#btn-star {
+    margin-top: 27px;
+    font-size: 26px;
+    padding: 10px;
+    border-radius: 25px;
+    font-family: monospace;
+    background-color: transparent;
+    color: antiquewhite;
+    border-color: antiquewhite;
+    box-shadow: 0 0 25px #ffffff;
+    text-shadow: 0 0 25px #ffffff;
+}
+
+.valor-desplegable {
+    position: relative;
+    width: 170px;
+    height: 25px;
+    overflow: hidden;
+  }
+  
+  .valor-desplegable:hover  {
+    overflow: visible;
+    color: #a5e038;
+  }
+  
+  .valor-desplegable .valorTexto {
+    width: 170px;
+    height: 25px;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 3px;
+    padding-left: 14px;
+    background-color:#ffff ;
+    color: #a5e038 ;
+    font-family: 'Delicious Handrawn', cursive;   
+  }
+  
+  .valor-desplegable .valorTexto::after {
+    content: "\25BF";
+    position: absolute;
+    right: 4px;
+   /* color: #222 !important;*/
+  }
+  
+  .valor-desplegable > ul,
+  .valor-desplegable > ul > li > ul {
+    list-style: none;
+    padding-left: 0;
+    position: absolute;
+    top: 24px;
+    border: 1px solid #ddd;
+    width: 170px;
+    margin-top: 0;
+    box-sizing: border-box;
+    background: white;
+    border-radius: 19px;
+  }
+  
+  .valor-desplegable li {
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 4px;
+    border-bottom: 1px solid #f5f5f5;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  
+  .valor-desplegable li:hover {
+    overflow: visible;
+    background: #1d4b52;
+  }
+  
+  .valor-desplegable > ul > li > ul {
+    top: -1px;
+    left: 169px;
+  }
+  
+  .valor-desplegable > ul > li > ul::before {
+    content:"\25B9";
+    position: absolute;
+    left: -15px;
+  }
+  
+  li {
+    font-family: 'Delicious Handrawn', cursive; 
+  }
+
+footer {
+    margin-top: -42px;
+    margin-left: 46%;
+}
+
+.september {
+    margin-left: 22px;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+section .star {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    animation: animate 8s ease-in-out infinite;
+}
+
+section .star.star1 {
+    animation-delay: 0s;
+    background: url(imagenes/star1.png);
+}
+
+section .star.star2 {
+    animation-delay: -1s;
+    background: url(imagenes/star2.png);
+}
+
+section .star.star3 {
+    animation-delay: -2s;
+    background: url(imagenes/star3.png);
+}
+
+section .star.star4 {
+    animation-delay: -3s;
+    background: url(imagenes/star4.png);
+}
+
+section .star.star5 {
+    animation-delay: -4s;
+    background: url(imagenes/star5.png);
+}
+
+section .star.star6 {
+    animation-delay: -5s;
+    background: url(imagenes/star6.png);
+}
+
+@keyframes animate {
+
+    0%,
+    20%,
+    40%,
+    60%,
+    80%,
+    100% {
+        opacity: 0;
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        opacity: 1;
+    }
+}
+
+.container.cards {
+    position: relative;
+    z-index: 1;
+    background: url(imagenes/fondo.jpg);
+    height: 93vh;
+    top: 67px;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+
+nav {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(90deg,#000000, #2e3a42, #03275e);
+}
+
+.box-nav {
+    width: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-left: 3%;
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.title{
+    font-size: 3rem;
+    text-shadow: 0 0 15px #ffff00;
+    color: #00ffff;
+    animation: title 1s infinite;
+    font-family: 'Delicious Handrawn', cursive;
+}
+
+@keyframes title {
+  50% {
+     text-shadow: 0 0 15px #00ffff;
+    color: #ffff00;
+  }
+} 
+
+.finder-character {
+  width: 342px;
+  height: 16px;
+  font-size: 24px;
+  margin-top: 11px;
+  border-radius: 20px;
+  background-color: #1c272e; 
+  padding: 16px;
+  color: #ffff;
+  font-family: 'Delicious Handrawn', cursive; 
+}
+
+form {
+   display: flex;
+   width: 230px;
+   margin-top: 15px;
+   align-items: flex-end;
+   justify-content: flex-end;
+}
+
+
+.rickAndMorty-card {
+
+    display: flex;
+    width: 200px;
+    height: 228px;
+    border-radius: 50%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    top: 70px;
+    margin-bottom: 15px;
+}
+
+.rickAndMorty-card:hover {
+    background: url(imagenes/portal.2.gif);
+    background-position: center;
+    background-size: cover;
+}
+
+.rickAndMorty-card img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
+
+.viewDescription {
+    width: 80px;
+    border-radius: 20px;
+    padding: 2px;
+    background-color: #1c272e;
+    color: #ffff;
+    box-shadow: 0 0 0px 2px #ffffff;  
+}
+
+h2 {
+    color: #fff;
+}
+
+.pagination {
+    position:fixed;
+    z-index: 2;
+    width: 55%;
+    height: 120px;
+}
+
+.box-btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-pagination{
+    height: 27px;
+    margin-top: 8px;
+}
+}
+
+button {
+    margin-left: 10px;
+    border-radius: 20px;
+    padding: 5px;
+    background-color:#ffff ;
+    color:#1c272e ;
+    box-shadow: 0 0 0px 2px #ffff;   
+}
+
+.container.cards.dimension {
+    
+    background: url(imagenes/dimension-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 0px;
+    height: 100vh;
+}
+
+.background {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.character-card {
+    background: url(imagenes/portal.2.gif);
+    background-position: center;
+    background-size: cover;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+   animation: portal-rotate linear .9s forwards;
+}
+
+@keyframes portal-rotate {
+    from {transform: scale(0) rotate(2turn);}
+    to{transform: scale(1) rotate(0turn);}
+}
+
+.character-card img{
+    width: 270px;
+    height: 260px;
+    border-radius: 20%;
+}
+
+.character-card h2 {
+    font-size: 40px;
+}
+
+p {
+    line-height: 22px;
+   color: #455A64;
+   font-weight: bolder;
+}
+
+.hide {
+    display: none;
+}
+
+.viewOrigin {
+    border-radius: 20px;
+    padding: 2px;
+    background-color: #1c272e;
+    color: #ffff;
+    box-shadow: 0 0 0px 2px #ffffff;
+}
+
+.viewLocation {
+    border-radius: 20px;
+    padding: 2px;
+    background-color: #1c272e;
+    color: #ffff;
+    box-shadow: 0 0 0px 2px #ffffff;
+}
+
+.viewLocation {
+    border-radius: 20px;
+    padding: 2px;
+    background-color: #1c272e;
+    color: #ffff;
+    box-shadow: 0 0 0px 2px #ffffff;
+}
+
+.viewResidentsOrigin {
+    border-radius: 20px;
+    padding: 2px;
+    background-color: #1c272e;
+    color: #ffff;
+    box-shadow: 0 0 0px 2px #ffffff;
+}
+
+.viewResidentsLocation {
+    border-radius: 20px;
+    padding: 2px;
+    background-color: #1c272e;
+    color: #ffff;
+    box-shadow: 0 0 0px 2px #ffffff;
+}
+
+.return {
+    border-radius: 10px;
+    width: 100px;
+    padding: 2px;
+    background-color: #1c272e;
+    color: #ffff;
+    box-shadow: 0 0 0px 2px #ffffff;
+}

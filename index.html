@@ -1,14 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="rick-and-morty.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="rick-and-morty.css">
+  <title>Rick y Morty</title>
+  <link rel="icon" type="imagen/jpg"
+    href="imagenes/desktop-wallpaper-rick-and-morty-logo-png-for-computer-supreme-rick-and-morty.jpg">
 </head>
-<body>
-  <div class="container" id="container"></div> 
-  <button class="btn-description">Descripción</buton>
+
+<body class="body-tag" id="body-tag">
+
+  <nav class="nav-tag" style="display: none;">
+    <div class="box-nav">
+      <div class="search">
+        <h2 class="title">Rick y Morty</h2>
+        <input type="text" id="txt-character" class="finder-character" placeholder="Nombre del personaje">
+      </div>
+      <form action="#">
+        <div class="valor-desplegable">
+          <input type="hidden" name="miValor" id="miValor" value="" />
+          <div id="miValorVisible" class="valorTexto">Personajes</div>
+          <ul>
+            <li type="all" val="all">Todos</li>
+            <li>
+              Estado
+              <ul>
+                <li type="status" val="alive">Vivo</li>
+                <li type="status" val="dead">Muerto</li>
+                <li type="status" val="unknown">Desconocido</li>
+              </ul>
+            </li>
+            <li>
+              Especie
+              <ul>
+                <li type="species" val="human">Humano</li>
+                <li type="species" val="alien">Alien</li>
+                <li type="species" val="unknown">Desconocido</li>
+              </ul>
+            </li>
+            <li>
+              Género
+              <ul>
+                <li type="gender" val="female">Mujer</li>
+                <li type="gender" val="male">Hombre</li>
+                <li type="gender" val="genderless">Sin Género</li>
+                <li type="gender" val="unknown">Desconocido</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </form>
+    </div>
+  </nav>
+
+    <div class="container">
+      <section>
+        <div class="star star1"></div>
+        <div class="star star2"></div>
+        <div class="star star3"></div>
+        <div class="star star4"></div>
+        <div class="star star5"></div>
+        <div class="star star6"></div>
+        <header><img src="imagenes/titulo-2.png" class="first-title"></header>
+        <h1>Proyecto Final</h1>
+        <button class="btn-star" id="btn-star">Comenzar</button>
+      </section>
+    </div>
+
+    <div class="pagination" id="pagination" style="display: none;">
+      <div class="box-btn">
+        <p class="page-results"></p>
+      <button class="btn-pagination" id="btn-first-page">Primer Página</buton>
+        <button class="btn-pagination" id="btn-prev">Anterior</buton>
+          <button class="btn-pagination" id="btn-next">Siguiente</buton>
+            <button class="btn-pagination" id="btn-last-page">Última Página</buton>
+            </div>
+    </div>
+
+    <footer>
+      <div class="data">
+        <p><strong>Paula Anabel Gonzalez</strong></p>
+        <p class="september">Septiembre 2023</p>
+      </div>
+    </footer>
+
 </body>
 <script src="rick-and-morty.js"></script>
+
 </html>
